@@ -17,6 +17,9 @@ module.exports = {
 				Montserrat: ["Montserrat"],
 				Newake: ["Newake"],
 			},
+		colors: {
+			'rojoPokemon': '#ee1515'
+		}
     },
   },
   plugins: [],

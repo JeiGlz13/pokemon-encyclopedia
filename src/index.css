@@ -36,3 +36,19 @@
         -webkit-text-stroke: 1.6px #3b4cca;;
     }
 }
+
+@media only screen and (max-width: 460px){
+
+    .contenedorDescripcion{
+        width: 100%;
+    
+    }
+
+    .textoDescripcion{
+        width: 100%;
+    }
+
+    .textoDesc{
+        width: 100%;
+    }
+}
