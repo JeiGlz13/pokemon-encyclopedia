@@ -12,7 +12,7 @@ export const Protagonists = () => {
       <div className='animate__animated animate__fadeIn flex flex-row flex-wrap justify-around items-start' >
             {
                 protagonistas.map((protagonista) =>(
-                    <SingleProtagonist {...protagonista} />
+                    <SingleProtagonist key={protagonista.generation} {...protagonista} />
                 ))
             }
       </div>

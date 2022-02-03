@@ -6,7 +6,6 @@ import { setProtaGender } from '../../../redux/actions/protaActions';
 export const InfoProta = () => {
   const prota = useSelector(state => state.prota);
   const dispatch = useDispatch();
-  console.log(prota.activeProta);
   let selectedProta;
   ((prota.activeProta === 'Female')?(selectedProta = prota.femaleProta):(selectedProta = prota.maleProta))
 
