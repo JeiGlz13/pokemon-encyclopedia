@@ -1,0 +1,19 @@
+.navbarTop{
+    transition: ease-in .4s;
+    color: #CE2211;
+    background-color: transparent;
+}
+
+.navbarTop .item{
+    background-color: white;
+}
+
+.navbarScroll{
+    transition: ease-in .4s;
+    background-color: #CE2211;
+    color: white;
+}
+
+.navShadow{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('http://fonts.cdnfonts.com/css/pokemon-solid');
+@import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
 
 *{
     border: 0;
@@ -12,28 +12,28 @@
 }
 
 .font-pokemon{
-    -webkit-text-stroke: 3.5px #3b4cca;
-    font-family: 'Pokemon Solid', sans-serif;
+    -webkit-text-stroke: 3.5px #1C4CBD;
+    font-family: "Pokemon", sans-serif;
     color: #ffde00;
 }
 
 .azulPokemon{
-    background-color: #3B4CCA;
+    background-color: #1C4CBD;
 }
 
 .colorPokemon{
-    color: #3B4CCA;
+    color: #1C4CBD;
 }
 
 @media only screen and (max-width: 640px) {
     .font-pokemon{
-        -webkit-text-stroke: 2.2px #3b4cca;;
+        -webkit-text-stroke: 2.2px #1C4CBD;
     }
 }
 
 @media only screen and (max-width: 440px) {
     .font-pokemon{
-        -webkit-text-stroke: 1.6px #3b4cca;;
+        -webkit-text-stroke: 1.6px #1C4CBD;
     }
 }
 

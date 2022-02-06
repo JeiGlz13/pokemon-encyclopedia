@@ -16,9 +16,10 @@ module.exports = {
 				Poppins: ["Poppins"],
 				Montserrat: ["Montserrat"],
 				Newake: ["Newake"],
+				'montserrat': ['Montserrat'],
 			},
 		colors: {
-			'rojoPokemon': '#ee1515'
+			'rojoPokemon': '#CE2211'
 		}
     },
   },

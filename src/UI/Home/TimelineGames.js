@@ -9,7 +9,7 @@ import { gamesGenerations } from '../../data/timelineElements';
 
 export const TimelineGames = () => {
   const iconStyle = {
-    background: '#3B4CCA',
+    background: '#CE2211',
     fontFamily: 'Poppins',
     color: "white",
     fontSize: "1.3rem",
@@ -18,19 +18,19 @@ export const TimelineGames = () => {
     alignItems: "center"
   }
 
-  return <div className='w-full flex justify-center'>
+  return <div className='w-full flex justify-center mt-6'>
       <div className='w-11/12 xs:w-9/12 mb-20' >
         <h1 className='text-2xl xs:text-3xl sm:text-5xl text-center pt-4 my-8 font-pokemon' >
           Pokemon a través de los años
         </h1>
 
-        <VerticalTimeline lineColor='#3B4CCA' >
+        <VerticalTimeline lineColor='#CE2211' >
           {
             gamesGenerations.map(game =>(
               <VerticalTimelineElement
                 key={game.generation}
                 date={game.realeseDate}
-                dateClassName='colorPokemon font-Poppins text-xs xs:text-base md:text-lg'
+                dateClassName='colorPokemon opacity-100 font-Poppins text-xs xs:text-base md:text-lg'
                 contentStyle={{
                   borderRadius: '20px',
                   boxShadow: 'rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px'

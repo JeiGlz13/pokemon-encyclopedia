@@ -5,7 +5,7 @@ export const InfoRegion = () => {
   const region = useSelector(state => state.region);
 
   return <div className='my-6 w-full'  >
-      <h1 className='text-center font-Poppins colorPokemon text-3xl font-bold'>
+      <h1 className='text-center font-Poppins text-rojoPokemon text-3xl font-bold'>
           {region.name}
       </h1>
       <div className='flex flex-row justify-around flex-wrap w-full px-0 xs:px-10 lg:px-16'>
@@ -24,7 +24,7 @@ export const InfoRegion = () => {
               <div className='flex flex-row px-6 sm:px-0'>
                   <div className='flex flex-col'>
                         <h1 className='font-Poppins colorPokemon font-semibold text-base sm:text-sm md:text-base lg:text-lg'>Campeón</h1>
-                        <h2 className='mt-4 font-Poppins text-red-800 font-bold text-lg sm:text-base md:text-lg lg:text-xl '>{region.campeon}</h2>
+                        <h2 className='mt-4 font-Poppins text-rojoPokemon font-bold text-lg sm:text-base md:text-lg lg:text-xl '>{region.campeon}</h2>
                   </div>
                   <img alt={region.campeon} src={region.spriteCampeon} 
                   className=' w-28 lg:w-32 ml-10 ' />

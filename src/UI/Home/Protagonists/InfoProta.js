@@ -23,12 +23,12 @@ export const InfoProta = () => {
         <div className='w-full flex flex-row flex-wrap relative' >
             <div className='w-full md:w-5/12 lg:w-6/12 px-4 flex flex-row justify-around mt-10' >
                 <img alt='prota' src={prota.imageMale} 
-                className= {`cursor-pointer w-20 xs:w-24 md:w-36 lg:w-44 
-                opacity-60 transition-all ${prota.activeProta === 'Male'&&'opacity-100'}`} 
+                className= {`drop-shadow-2xl cursor-pointer w-20 xs:w-24 md:w-36 lg:w-44 
+                opacity-60 transition-all ${(prota.activeProta === 'Male')&&'opacity-90'}`} 
                 onClick={(e)=>setGender(e, 'Male')} />
                 <img alt='prota' src={prota.imageFemale} 
-                className= {`cursor-pointer w-20 xs:w-24 md:w-36 lg:w-44 
-                transition-all opacity-60 ${prota.activeProta === 'Female'&&'opacity-100'}`}
+                className= {`drop-shadow-2xl cursor-pointer w-20 xs:w-24 md:w-36 lg:w-44 
+                transition-all opacity-60 ${(prota.activeProta === 'Female')&&'opacity-90'}`}
                 onClick={(e)=>setGender(e, 'Female')}  />
             </div>
             <div className='w-full md:w-7/12 lg:w-6/12 py-10 px-1 xs:px-3 sm:px-5' >

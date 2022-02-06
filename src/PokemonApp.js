@@ -1,8 +1,8 @@
 import React from 'react';
-import { HomeScreen } from './Vistas/HomeScreen';
+import { AppRouter } from './routers/AppRouter';
 
 export const PokemonApp = () => {
   return <>
-    <HomeScreen/>
+    <AppRouter/>
   </>;
 };
