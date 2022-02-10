@@ -54,7 +54,7 @@ export const Navbar = () => {
       
       <div className={`flex sm:hidden mx-8 text-2xl xs:text-3xl transition-all duration-200
        ${(parallax)?'text-white':'text-rojoPokemon'}`} >
-          <i class="fas fa-bars cursor-pointer"
+          <i className="fas fa-bars cursor-pointer"
            onClick={handleNavbar} ></i>
       </div>
 

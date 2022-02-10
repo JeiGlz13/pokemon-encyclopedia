@@ -19,7 +19,9 @@ module.exports = {
 				'montserrat': ['Montserrat'],
 			},
 		colors: {
-			'rojoPokemon': '#CE2211'
+			'rojoPokemon': '#CE2211',
+			'grisOscuro': '#212121',
+			'steelBlue': '#3c5aa6'
 		}
     },
   },

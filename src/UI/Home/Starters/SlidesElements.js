@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setActiveStarter } from '../../../redux/actions/starter';
+import { setActiveStarter } from '../../../redux/actions/starterActions';
 
 export const SlidesElements = ({
     generation,
