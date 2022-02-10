@@ -1,82 +1,122 @@
 export const pokemonType = [
     {
       name: "normal",
-      url: "https://pokeapi.co/api/v2/type/1/"
+      englishName: 'normal',
+      urlValue: "1/",
+      color: '#a6a877'
     },
     {
       name: "pelea",
-      url: "https://pokeapi.co/api/v2/type/2/"
+      englishName: 'fighting',
+      urlValue: "2/",
+      color: '#bf3028'
     },
     {
       name: "volador",
-      url: "https://pokeapi.co/api/v2/type/3/"
+      englishName: 'flying',
+      urlValue: "3/",
+      color: '#a98ff0'
     },
     {
       name: "veneno",
-      url: "https://pokeapi.co/api/v2/type/4/"
+      englishName: 'poison',
+      urlValue: "4/",
+      color: '#a03f9c'
     },
     {
       name: "tierra",
-      url: "https://pokeapi.co/api/v2/type/5/"
+      englishName: 'ground',
+      urlValue: "5/",
+      color: '#dfbf68'
     },
     {
       name: "roca",
-      url: "https://pokeapi.co/api/v2/type/6/"
+      englishName: 'rock',
+      urlValue: "6/",
+      color: '#b8a137'
     },
     {
       name: "bicho",
-      url: "https://pokeapi.co/api/v2/type/7/"
+      englishName: 'bug',
+      urlValue: "7/",
+      color: '#a8b720'
     },
     {
       name: "fantasma",
-      url: "https://pokeapi.co/api/v2/type/8/"
+      englishName: 'ghost',
+      urlValue: "8/",
+      color: '#6e5896'
     },
     {
       name: "acero",
-      url: "https://pokeapi.co/api/v2/type/9/"
+      englishName: 'steel',
+      urlValue: "9/",
+      color: '#b9b7cf'
     },
     {
       name: "fuego",
-      url: "https://pokeapi.co/api/v2/type/10/"
+      englishName: 'fire',
+      urlValue: "10/",
+      color: '#ee7f30'
     },
     {
       name: "agua",
-      url: "https://pokeapi.co/api/v2/type/11/"
+      englishName: 'water',
+      urlValue: "11/",
+      color: '#678fee'
     },
     {
       name: "planta",
-      url: "https://pokeapi.co/api/v2/type/12/"
+      englishName: 'grass',
+      urlValue: "12/",
+      color: '#77c850'
     },
     {
       name: "electrico",
-      url: "https://pokeapi.co/api/v2/type/13/"
+      englishName: 'electric',
+      urlValue: "13/",
+      color: '#f7cf2f'
     },
     {
-      name: "psyciquico",
-      url: "https://pokeapi.co/api/v2/type/14/"
+      name: "psiquico",
+      englishName: 'psychic',
+      urlValue: "14/",
+      color: '#f85687'
     },
     {
       name: "hielo",
-      url: "https://pokeapi.co/api/v2/type/15/"
+      englishName: 'ice',
+      urlValue: "15/",
+      color: '#98d5d6'
     },
     {
       name: "dragon",
-      url: "https://pokeapi.co/api/v2/type/16/"
+      englishName: 'dragon',
+      urlValue: "16/",
+      color: '#6f38f6'
     },
     {
       name: "siniestro",
-      url: "https://pokeapi.co/api/v2/type/17/"
+      englishName: 'dark',
+      urlValue: "17/",
+      color: '#725847'
     },
     {
       name: "hada",
-      url: "https://pokeapi.co/api/v2/type/18/"
+      englishName: 'fairy',
+      urlValue: "18/",
+      color: '#feaec7'
     },
     {
-      name: "udesconocido",
-      url: "https://pokeapi.co/api/v2/type/10001/"
+      name: "desconocido",
+      englishName: 'unknown',
+      urlValue: "10001",
+      color: '#bcbcbc'
     },
     {
       name: "sombra",
-      url: "https://pokeapi.co/api/v2/type/10002/"
+      englishName: 'shadow',
+      urlValue: "10002",
+      color: '#212121'
     }
   ]

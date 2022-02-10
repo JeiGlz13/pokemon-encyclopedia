@@ -6,7 +6,7 @@ export const BannerWelcome = () => {
   return <>
     <div className="container text-[#CE2211] mx-auto px-2 xs:px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center my-20">
         <div className="sm:w-2/5 flex flex-col items-center md:items-start mt-8 sm:mt-0">
-            <h1 className="text-4xl lg:text-6xl leading-none mb-4 text-center md:text-left">
+            <h1 className="text-4xl lg:text-6xl leading-none mb-2 text-center md:text-left">
                 <strong className="font-black text-center md:text-left">Enciclopedia Pokemon</strong> 
             </h1>
             <p className="lg:text-xl text-center md:text-left font-semibold mb-3 sm:mb-5 md:mb-12 text-[#1C4CBD]">

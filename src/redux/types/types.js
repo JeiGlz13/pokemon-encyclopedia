@@ -5,4 +5,8 @@ export const types = {
     setProtaGender: '[prota] set prota gender',
 
     setActiveStarter: '[starter] set active starter',
+
+    setSearchPokemon: '[search] set search pokemon',
+    setPokemonNotFound: '[search] set pokemon not found',
+    clearSearch: '[search] clear search'
 }
