@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import Swal from 'sweetalert2';
-import { startSearching } from '../redux/actions/searchActions';
+import { startSearching, startSearchingGeneration } from '../redux/actions/searchActions';
 
 export const TitleSearch = ({title, descripcion, urlValue}) => {
     const dispatch = useDispatch()
@@ -17,9 +17,32 @@ export const TitleSearch = ({title, descripcion, urlValue}) => {
             [target.name]: target.value
         })
     }
+    const setGenerationNumber = (value) =>{
+        switch (value) {
+            case ('generacion 1' || 'generation 1' || 'primera' || 'uno' || 'first' || 'primera generacion'):
+                return '1';
+            case ('generacion 2' || 'generation 2' || 'segunda' || 'dos' || 'second' || 'segunda generacion'):
+                return '2';
+            case ('generacion 3' || 'generation 3' || 'tercera' || 'tres' || 'third' || 'tercera generacion'):
+                return '3';
+            case ('generacion 4' || 'generation 4' || 'cuarta' || 'cuatro' || 'fourth' || 'cuarta generacion'):
+                return '4';
+            case ('generacion 5' || 'generation 5' || 'quinta' || 'cinco' || 'fifth' || 'quinta generacion'):
+                return '5';
+            case ('generacion 6' || 'generation 6' || 'sexta' || 'seis' || 'sixth' || 'sexta generacion'):
+                return '6';
+            case ('generacion 7' || 'generation 7' || 'septima' || 'siete' || 'seventh' || 'septima generacion'):
+                return '7';
+            case ('generacion 8' || 'generation 8' || 'octava' || 'ocho' || 'eighth' || 'octava generacion'):
+                return '8';
+        
+            default:
+                return value;
+        }
+    } 
     
     const searchPokemon = ()=>{
-        const searchValue = search.toLowerCase();
+        let searchValue = search.toLowerCase().trim();
         const urlValueLower = urlValue.toLowerCase();
         
         Swal.fire({
@@ -31,7 +54,15 @@ export const TitleSearch = ({title, descripcion, urlValue}) => {
             }
         });
 
-        dispatch(startSearching(urlValueLower, searchValue));
+        if (urlValueLower === 'generation') {
+            searchValue = setGenerationNumber(searchValue); 
+            dispatch(startSearchingGeneration(urlValueLower, searchValue))
+        }
+        
+        if (urlValueLower === 'pokemon') {
+            dispatch(startSearching(urlValueLower, searchValue));
+        }
+
         setTimeout(() => {
             Swal.close();
         }, 400);

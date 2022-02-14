@@ -15,7 +15,6 @@ import { SlidesElements } from "./SlidesElements";
 
 
 export const Slides = () => {
-  console.log(startersPokemon.length);
   return (
     <>
       <Swiper

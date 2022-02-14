@@ -21,7 +21,8 @@ module.exports = {
 		colors: {
 			'rojoPokemon': '#CE2211',
 			'grisOscuro': '#212121',
-			'steelBlue': '#3c5aa6'
+			'steelBlue': '#3c5aa6',
+			'azulPokemon': '#1C4CBD',
 		}
     },
   },

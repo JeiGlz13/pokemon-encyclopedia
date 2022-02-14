@@ -1,5 +1,6 @@
 import {createStore, combineReducers, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk';
+import {modalReducer} from './reducers/modalReducer';
 import { protaReducer } from './reducers/protaReducer';
 import {regionReducer} from './reducers/regionReducer';
 import { searchReducer } from './reducers/searchReducer';
@@ -12,6 +13,7 @@ const reducers = combineReducers({
     prota: protaReducer,
     starter: starterReducer,
     search: searchReducer,
+    modal: modalReducer,
 });
 export const store = createStore(
     reducers, 

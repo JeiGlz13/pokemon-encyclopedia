@@ -1,7 +1,7 @@
 import { types } from "../types/types";
 
 const initialState = {
-    status: 'not searched'
+    status: 'not searched',
 };
 
 export const searchReducer = (state = initialState, action) => {
@@ -22,14 +22,21 @@ export const searchReducer = (state = initialState, action) => {
         height: action.payload.height,
        };
 
+    case types.setSearchGeneration:
+      return {...state,
+         status: 'searched',
+         pokemonList: [...action.payload.list],
+         generation: action.payload.generation
+      }
+
     case types.setPokemonNotFound:
         return {
-          status: 'not found'
+          status: 'not found',
         }
 
     case types.clearSearch:
         return {
-            status: 'not searched'
+            status: 'not searched',
         }
 
     default:
