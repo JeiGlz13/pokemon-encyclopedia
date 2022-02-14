@@ -28,8 +28,8 @@ export const PokemonResult = () => {
 
           <div className='flex flex-row flex-wrap justify-center mt-6' >
             {
-              types.map((type)=>(
-                <LabelType typePokemon= {type.type.name} />
+              types.map((type, index)=>(
+                <LabelType key={index} typePokemon= {type.type.name} />
               ))
             }
           </div>
@@ -59,8 +59,8 @@ export const PokemonResult = () => {
                 Habilidades
               </h1>
               {
-                abilities.map((ability) =>(
-                  <h1 className='text-grisOscuro font-Poppins font-semibold text-sm xs:text-lg sm:text-base lg:text-lg pl-4 first-letter:uppercase'>{ability.ability.name}</h1>
+                abilities.map((ability, index) =>(
+                  <h1 key={index} className='text-grisOscuro font-Poppins font-semibold text-sm xs:text-lg sm:text-base lg:text-lg pl-4 first-letter:uppercase'>{ability.ability.name}</h1>
                 ))
               }
             </div>
@@ -71,8 +71,8 @@ export const PokemonResult = () => {
                 Estadisticas base
               </h1>
               {
-                stats.map((stat)=>(
-                  <h1 className=' text-grisOscuro font-Poppins font-semibold text-xs xs:text-base sm:text-sm lg:text-base'>
+                stats.map((stat, index)=>(
+                  <h1 key={index}  className=' text-grisOscuro font-Poppins font-semibold text-xs xs:text-base sm:text-sm lg:text-base'>
                     <strong className='mr-0 xs:mr-1 sm:mr-4 text-steelBlue first-letter:uppercase font-Poppins  font-semibold text-sm xs:text-lg sm:text-base lg:text-lg pl-0 xs:pl-1 md:pl-4' >{stat.stat.name}: </strong>
                     {stat.base_stat}
                   </h1>

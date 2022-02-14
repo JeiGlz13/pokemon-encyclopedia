@@ -7,6 +7,10 @@ export const types = {
     setActiveStarter: '[starter] set active starter',
 
     setSearchPokemon: '[search] set search pokemon',
+    setSearchGeneration: '[search] set search generation',
     setPokemonNotFound: '[search] set pokemon not found',
-    clearSearch: '[search] clear search'
+    clearSearch: '[search] clear search',
+
+    setModalOpen: '[modal] set open modal',
+    setCloseModal: '[modal] set close modal'
 }

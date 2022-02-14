@@ -32,7 +32,7 @@ export const Navbar = () => {
         setModal(!modal);
     }
 
-  return <nav className= {`fixed z-50 top-0 flex flex-row flex-wrap justify-between items-center 
+  return <nav className= {`fixed z-30 top-0 flex flex-row flex-wrap justify-between items-center 
   w-full font-Poppins font-bold text-base md:text-lg lg:text-xl shadow-md navbarTop
   ${(parallax)?'navbarScroll':'navbarTop'} `} >
       <Link className='flex mx-1 xs:mx-3 sm:mx-5 lg:mx-8 py-2 w-5/12 xs:w-4/12 sm:w-3/12'
@@ -58,17 +58,20 @@ export const Navbar = () => {
            onClick={handleNavbar} ></i>
       </div>
 
-      <div className = {`absolute sm:hidden right-8 xs:right-10 top-12  
-                        ${(modal)?'absolute':'hidden'} `}  >
-            <div className={`flex flex-col items-center justify-between p-5 text-base xs:text-lg w-40 xs:w-48 h-32 xs:h-36 rounded-2xl navShadow
-                                ${(parallax)?'navbarTop item':'navbarScroll'}`} 
-                                onClick ={handleNavbar} >
-               {
-                itemsNavbar.map((item, index)=>(
-                        <NavbarLinks key={index} title={item.title} link = {item.link} />
-                    ))
-                }
+      {
+          (modal)&&(
+            <div className = 'absolute sm:hidden right-8 xs:right-10 top-12'  >
+                    <div className={`flex flex-col items-center justify-between p-5 text-base xs:text-lg w-40 xs:w-48 h-32 xs:h-36 rounded-2xl navShadow
+                                        ${(parallax)?'navbarTop item':'navbarScroll'}`} 
+                                        onClick ={handleNavbar} >
+                    {
+                        itemsNavbar.map((item, index)=>(
+                                <NavbarLinks key={index} title={item.title} link = {item.link} />
+                            ))
+                        }
+                    </div>
             </div>
-      </div>
+          )
+      }
   </nav>;
 };
