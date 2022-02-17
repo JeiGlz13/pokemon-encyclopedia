@@ -29,6 +29,14 @@ export const searchReducer = (state = initialState, action) => {
          generation: action.payload.generation
       }
 
+    case types.setSearchType:
+      return {
+        ...state,
+        status: 'searched',
+        pokemonList: [...action.payload.list],
+        type: action.payload.type
+      }
+
     case types.setPokemonNotFound:
         return {
           status: 'not found',

@@ -1,16 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import { useSelector } from 'react-redux';
-import { CardType } from '../Types/CardType';
-import { GenerationModal } from './GenerationModal';
-
-import '../Navbar/Navbar.css';
+import { GenerationModal } from '../Generation/GenerationModal';
 import { SpecificNotSearched } from '../SpecificNotSearched';
+import {CardType} from './CardType';
 
-export const GenerationResult = () => {
-    const {pokemonList, generation} = useSelector(state=>state.search);
-    const {modal} = useSelector(state=>state.modal);
+export const CardsTypes = () => {
+  const {modal} = useSelector(state=>state.modal);
+  const {pokemonList, type} =  useSelector(state=>state.search);
 
-    const [searchPokemon, setSearchPokemon] = useState(pokemonList);
+  const [searchPokemon, setSearchPokemon] = useState(pokemonList);
 
     useEffect(() => {
       setSearchPokemon(pokemonList);
@@ -44,17 +42,15 @@ export const GenerationResult = () => {
     e.preventDefault();
     setSearchPokemon(pokemonList);
   }
-
   return (
+    <div className='w-full mt-10 mb-6 flex flex-row flex-wrap justify-around '>
 
-
-    <div className='w-full flex flex-row flex-wrap justify-around items-center my-6 xs:my-8 sm:my-12 md:my-16' >
       <h1 className='w-full text-center text-2xl md:text-3xl font-black text-rojoPokemon mb-8' >
-          Generacion {generation}
+          Tipo {type}
       </h1>
 
       <div className='w-full flex flex-col justify-start items-start px-8 sm:px-14 mt-3 xs:mt-4 md:mt-6 mb-4 font-Poppins'>
-          <h1 className = 'font-semibold mb-2 text-xl ' >Buscar Pokemon de la {generation}° generacion</h1>
+          <h1 className = 'font-semibold mb-2 text-xl ' >Buscar Pokemon de tipo {type}</h1>
 
           <div className='w-full flex flex-row justify-start items-center flex-wrap mt-4'>
             <div className="relative text-gray-800 text-base xs:text-lg w-9/12 xs:w-8/12 sm:w-7/12 md:w-6/12 lg:w-5/12 ">
@@ -83,27 +79,21 @@ export const GenerationResult = () => {
               </button>
           </div>
       </div>
-
       
-
         {
-      
-
-          (searchPokemon.length > 0)?(
-            searchPokemon.map((pokemon, index)=>(
-              <CardType key={index} modal='openGeneration' {...pokemon} />
-            ))
-          ):(
-            <SpecificNotSearched descripcion={`Pokemon no encontrado en la ${generation}° generacion`} />
-          )
-            
+            (searchPokemon.length > 0)?(
+              searchPokemon.map((pokemon, index)=>(
+                <CardType key={index} modal = {'openType'} {...pokemon} />))
+            ):(
+              <SpecificNotSearched descripcion={`pokemon no encontrado en el tipo ${type}`} />
+            )
         }
 
 
-        {
-          (modal === 'openGeneration')&&(<GenerationModal/>)
-        }
 
+        {
+          (modal === 'openType')&&(<GenerationModal/>)
+        }
     </div>
   )
 }

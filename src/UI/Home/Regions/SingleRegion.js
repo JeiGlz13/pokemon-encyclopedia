@@ -31,8 +31,8 @@ export const SingleRegion = ({
    } 
 
   return <div className={`transform  hover:scale-110 hover:shadow-lg duration-300 
-                    cursor-pointer transition-all flex flex-col justify-center mx-0 xs:mx-2 lg:mx-4 mb-4 xs:mb-2 sm:mb-6 opacity-60 
-                            ${(region.generation === generation)&&"opacity-90"}`}
+                    cursor-pointer transition-all flex flex-col justify-center mx-0 xs:mx-2 lg:mx-4 mb-4 xs:mb-2 sm:mb-6  
+                            ${(region.generation === generation)?("opacity-100"):("opacity-60")}`}
             onClick={setActive} >
       <h1 className='font-Poppins text-lg xs:text-base sm:text-xl md:text-2xl font-bold text-center colorPokemon' >
         {name}
