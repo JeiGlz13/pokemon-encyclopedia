@@ -49,16 +49,16 @@ export const SlidesElements = ({
       </h1>
       <div className='flex flex-row flex-wrap justify-around mt-4' >
           <img src={spritePlanta}  alt = {pokemonPlanta.name} 
-          className={`opacity-60 w-5/12 xs:w-3/12 sm:w-2/12 cursor-pointer
-          ${(activeStarter === 'Planta')&&"opacity-90"} `} 
+          className={`w-5/12 xs:w-3/12 sm:w-2/12 cursor-pointer
+          ${(activeStarter === 'Planta')?("opacity-100"):("opacity-60")} `} 
           onClick={e=>setActivePokemon(e, 'Planta')} />
           <img src={spriteFuego}  alt = {pokemonFuego.name} 
-          className={`opacity-60 w-5/12 xs:w-3/12 sm:w-2/12 cursor-pointer
-          ${(activeStarter === 'Fuego')&&"opacity-90"} `} 
+          className={`w-5/12 xs:w-3/12 sm:w-2/12 cursor-pointer
+          ${(activeStarter === 'Fuego')?("opacity-100"):("opacity-60")} `} 
           onClick={e=>setActivePokemon(e, 'Fuego')} />
           <img src={spriteAgua}  alt = {pokemonAgua.name} 
-          className={`opacity-60 w-5/12 xs:w-3/12 sm:w-2/12 cursor-pointer
-          ${(activeStarter === 'Agua')&&"opacity-90"} `} 
+          className={`w-5/12 xs:w-3/12 sm:w-2/12 cursor-pointer
+          ${(activeStarter === 'Agua')?("opacity-100"):("opacity-60")} `} 
           onClick={e=>setActivePokemon(e, 'Agua')} />
       </div>
 

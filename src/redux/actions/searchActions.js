@@ -17,20 +17,53 @@ export const startSearchingGeneration = (urlValue, valueSearch) =>{
         const data = await getPokemon(urlValue, valueSearch);
 
         if (data) {
-            /* let singlePokemon = []; 
-
-            await data.pokemon_species.forEach(async (pokemon) => {
+            const singlePokemon = await data.pokemon_species.map(async (pokemon) => {
                 const data = await getPokemon('pokemon', pokemon.name);
     
-                const {abilities, id, name, types, sprites, stats, weight, height} = await data;
+                const {abilities, id, name, types, sprites, stats, weight, height,base_experience, species} = await data;
     
-                const pokemonInfo = {abilities, id,name,types, sprites,stats, weight, height}
-                singlePokemon.push(pokemonInfo);
-            }); */
-            dispatch(setGeneration(data.pokemon_species, valueSearch));
+                const pokemonInfo = {abilities, id,name,types, sprites,stats, weight, height, base_experience, species}
+                return pokemonInfo;
+            }) 
+
+            Promise.all(singlePokemon).then(result =>{
+                result.sort((a, b)=>{
+                    return a.id - b.id
+                });
+
+                dispatch(setGeneration(result, valueSearch));
+            });
+
         } else {
             dispatch(pokemonNotFound());   
         }
+    }
+}
+
+export const startSearchingType = (type, typeEnglish) =>{
+    return async (dispatch) =>{
+        const data = await getPokemon('type', typeEnglish);
+        if (data) {
+            const singlePokemon = await data.pokemon.map(async (pokemon) => {
+                const data = await getPokemon('pokemon', pokemon.pokemon.name);
+    
+                const {abilities, id, name, types, sprites, stats, weight, height,base_experience, species} = await data;
+    
+                const pokemonInfo = {abilities, id,name,types, sprites,stats, weight, height, base_experience, species}
+                return pokemonInfo;
+            }) 
+
+            Promise.all(singlePokemon).then(result =>{
+                result.sort((a, b)=>{
+                    return a.id - b.id
+                });
+
+                dispatch(setType(result, type));
+            })
+        } else {
+            dispatch(pokemonNotFound());
+        }
+
     }
 }
 
@@ -46,6 +79,14 @@ const setGeneration = (arrPokemon, generation) =>({
         generation
     }
 });
+
+const setType = (arrPokemon, type) =>({
+    type: types.setSearchType,
+    payload: {
+        list: arrPokemon,
+        type
+    }
+})
 
 export const clearSearch = () =>({type: types.clearSearch});
 

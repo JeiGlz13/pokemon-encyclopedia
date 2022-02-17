@@ -32,8 +32,8 @@ import { setProtaRegion } from '../../../redux/actions/protaActions';
     }
 
         return <div className= {`transform  hover:scale-110 duration-300 
-                    cursor-pointer transition-all flex flex-col justify-center mx-0 xs:mx-6 lg:mx-8 mb-5 xs:mb-3 sm:mb-8 opacity-60 
-                ${(prota.generation === generation)&&"opacity-90"}`}
+                    cursor-pointer transition-all flex flex-col justify-center mx-0 xs:mx-6 lg:mx-8 mb-5 xs:mb-3 sm:mb-8  
+                ${(prota.generation === generation)?("opacity-100"):("opacity-60")}`}
                 onClick={setProta} >
             <h1 className='font-Poppins text-lg sm:text-base md:text-xl lg:text-2xl font-bold text-center text-rojoPokemon ' >
                 {names}

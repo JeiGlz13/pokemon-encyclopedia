@@ -8,6 +8,7 @@ export const types = {
 
     setSearchPokemon: '[search] set search pokemon',
     setSearchGeneration: '[search] set search generation',
+    setSearchType: "[search] set search type",
     setPokemonNotFound: '[search] set pokemon not found',
     clearSearch: '[search] clear search',
 

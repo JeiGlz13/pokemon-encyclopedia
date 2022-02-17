@@ -94,22 +94,25 @@ export const TitleSearch = ({title, descripcion, urlValue}) => {
 
       <div className="flex items-center justify-center w-full mx-auto bg-white rounded-full font-Poppins font-semibold " >
         
-        <div className="relative text-gray-800 text-base xs:text-lg w-11/12 xs:w-10/12 sm:w-9/12 md:w-8/12 lg:w-7/12 mt-4">
-            <input type="search" 
-            id='search'
-            name="search"
-            autoComplete='none' 
-            placeholder="Buscar" 
-            value={search}
-            onChange = {handleInputChange}
-            className="bg-gray-100 h-11 sm:h-12 px-7 pr-16 w-full
-            rounded-full shadow-lg text-base md:text-lg focus:outline-none" />
-            
-            <button className="absolute text-xl md:text-2xl right-0 top-0 ml-2 mt-2 mr-5"
-            onClick={handleOnSearch} >
-                <i className="fas fa-search"></i>
-            </button>
-        </div>
+      <div className="bg-white flex items-center rounded-full cardShadow h-16 w-10/12 xs:w-9/12 sm:w-8/12 md:w-7/12">
+                <input type="search" name="search"
+                    className="rounded-full w-full py-2 px-6 text-gray-700 leading-tight focus:outline-none"
+                    autoComplete='none'
+                    max={45}
+                    id="search" 
+                    placeholder="Buscar" 
+                    value= {search} 
+                    onChange = {handleInputChange} />
+
+                <div className="p-2 md:p-4">
+                    <button
+                        className="rounded-full focus:outline-none w-10 h-12 md:w-10 md:h-12 flex items-center justify-center">
+                        <img src="https://github.com/ahampriyanshu/gokemon/raw/master/assets/img/pokeball.png"
+                            className="pokeball" alt="pokeball"
+                            onClick = {handleOnSearch} />
+                    </button>
+                </div>
+          </div>
 
     </div>
   </div>;
