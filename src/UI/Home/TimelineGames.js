@@ -20,7 +20,8 @@ export const TimelineGames = () => {
 
   return <div className='w-full flex justify-center mt-6'>
       <div className='w-11/12 xs:w-9/12 mb-20' >
-        <h1 className='text-2xl xs:text-3xl sm:text-5xl text-center pt-4 my-8 font-pokemon' >
+        <h1 className='text-2xl xs:text-3xl sm:text-5xl text-center pt-4 my-8 
+        font-black text-rojoPokemon ' >
           Pokemon a través de los años
         </h1>
 

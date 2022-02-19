@@ -5,7 +5,7 @@ import { SingleProtagonist } from './SingleProtagonist';
 
 export const Protagonists = () => {
   return <div className='my-20 mx-8' >
-      <h1 className='text-2xl xs:text-3xl sm:text-5xl text-center my-20 font-pokemon' >
+      <h1 className='text-2xl xs:text-3xl sm:text-5xl text-center my-20 font-black text-rojoPokemon' >
           Protagonistas
       </h1>
 

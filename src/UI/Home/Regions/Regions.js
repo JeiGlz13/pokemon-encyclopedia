@@ -5,7 +5,7 @@ import { SingleRegion } from './SingleRegion';
 
 export const Regions = () => {
   return <div>
-        <h1 className='text-2xl xs:text-3xl sm:text-5xl text-center pt-4 my-8 font-pokemon' >
+        <h1 className='text-2xl xs:text-3xl sm:text-5xl text-center pt-4 my-8 font-black text-rojoPokemon' >
           Regiones Pokemon
         </h1>
         <div className='animate__animated animate__fadeIn flex flex-row flex-wrap justify-around items-start px-8 my-20' >
