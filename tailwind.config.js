@@ -23,7 +23,7 @@ module.exports = {
 			'grisOscuro': '#212121',
 			'steelBlue': '#3c5aa6',
 			'azulPokemon': '#1C4CBD',
-		}
+		},
     },
   },
   plugins: [],

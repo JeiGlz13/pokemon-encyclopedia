@@ -1,22 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import Swal from 'sweetalert2';
+import { useForm } from '../hooks/useForm';
 import { startSearching, startSearchingGeneration } from '../redux/actions/searchActions';
 
 export const TitleSearch = ({title, descripcion, urlValue}) => {
-    const dispatch = useDispatch()
-    const [formValue, setFormValue] = useState({
+    const dispatch = useDispatch();
+    const {formValue, handleInputChange, reset} = useForm({
         search: ''
     });
 
-    const {search} = formValue;
-
-    const handleInputChange = ({target}) =>{
-        setFormValue({
-            ...formValue,
-            [target.name]: target.value
-        })
-    }
     const setGenerationNumber = (value) =>{
         switch (value) {
             case ('generacion 1' || 'generation 1' || 'primera' || 'uno' || 'first' || 'primera generacion'):
@@ -42,7 +35,7 @@ export const TitleSearch = ({title, descripcion, urlValue}) => {
     } 
     
     const searchPokemon = ()=>{
-        let searchValue = search.toLowerCase().trim();
+        let searchValue = formValue.search.toLowerCase().trim();
         const urlValueLower = urlValue.toLowerCase();
         
         Swal.fire({
@@ -65,19 +58,14 @@ export const TitleSearch = ({title, descripcion, urlValue}) => {
 
         setTimeout(() => {
             Swal.close();
-        }, 400);
+        }, 800);
     }
 
     const handleOnSearch = (e) =>{
         e.preventDefault();
         searchPokemon();
-        setFormValue({
-            search: ''
-        })
+        reset();
     };
-
-
-
 
   return <div className='flex flex-col mt-20 ' >
       <h1 className='text-center pt-4 my-6 md:my-8 text-2xl xs:text-3xl md:text-4xl font-black text-rojoPokemon' >
@@ -94,25 +82,27 @@ export const TitleSearch = ({title, descripcion, urlValue}) => {
 
       <div className="flex items-center justify-center w-full mx-auto bg-white rounded-full font-Poppins font-semibold " >
         
-      <div className="bg-white flex items-center rounded-full cardShadow h-16 w-10/12 xs:w-9/12 sm:w-8/12 md:w-7/12">
+      <form className="bg-white flex items-center rounded-full cardShadow h-16 w-10/12 xs:w-9/12 sm:w-8/12 md:w-7/12"
+      onSubmit={handleOnSearch} >
                 <input type="search" name="search"
                     className="rounded-full w-full py-2 px-6 text-gray-700 leading-tight focus:outline-none"
                     autoComplete='none'
                     max={45}
                     id="search" 
                     placeholder="Buscar" 
-                    value= {search} 
+                    value= {formValue.search} 
                     onChange = {handleInputChange} />
 
                 <div className="p-2 md:p-4">
+                    <input type="submit" className='hidden' id='buttonPokeball' />
                     <button
                         className="rounded-full focus:outline-none w-10 h-12 md:w-10 md:h-12 flex items-center justify-center">
                         <img src="https://github.com/ahampriyanshu/gokemon/raw/master/assets/img/pokeball.png"
                             className="pokeball" alt="pokeball"
-                            onClick = {handleOnSearch} />
+                            onClick = {()=>document.querySelector('#buttonPokeball').click()} />
                     </button>
                 </div>
-          </div>
+          </form>
 
     </div>
   </div>;
