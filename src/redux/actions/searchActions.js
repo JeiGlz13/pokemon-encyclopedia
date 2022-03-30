@@ -18,7 +18,11 @@ export const startSearchingGeneration = (urlValue, valueSearch) =>{
 
         if (data) {
             const singlePokemon = await data.pokemon_species.map(async (pokemon) => {
-                const data = await getPokemon('pokemon', pokemon.name);
+                const searchingId = await fetch(pokemon.url);
+                const pokemonByUrl = await searchingId.json();
+
+
+                const data = await getPokemon('pokemon', pokemonByUrl.id);
     
                 const {abilities, id, name, types, sprites, stats, weight, height,base_experience, species} = await data;
     
